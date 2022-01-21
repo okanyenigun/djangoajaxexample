@@ -21,7 +21,6 @@
         <input type="text" placeholder="Enter value" name="value-field" id="value-field">
         <button id="submit">Submit</button>
     </form>
-    <ul id="seconds"></ul>
     <div class="chart-content" style="width: 50vw; max-height: 30vh;">
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
@@ -34,14 +33,14 @@
             const myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: [1, 2],
+                    labels: [1, 2], //dummy initial labels
                     datasets: [{
                         label: 'Data Chart',
-                        data: [1, 2],
+                        data: [1, 2], //dummy initial data
                     }]
                 },
                 options: {
-                    responsive: false,
+                    responsive: false, //to define specific size
                 }
             });
             $('#submit').click(function (e) {

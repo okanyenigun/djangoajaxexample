@@ -10,10 +10,9 @@ class Viewer(View):
 
     def get(self,request:HttpRequest):
         if request.GET.get('val'):
-            value = float(request.GET.get('val'))
-            value += 10
-            print("value: ",value)
-            return JsonResponse({'data':value},status=200)
+            value = float(request.GET.get('val')) #get data from ajax
+            value += 10 #dummy process
+            return JsonResponse({'data':value},status=200) #return json response
         return render(request,'./templates/index.html')
 
     def post(self,request:HttpRequest):
